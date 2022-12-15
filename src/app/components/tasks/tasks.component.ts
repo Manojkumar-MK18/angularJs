@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import Tasks, { TasksProsp } from 'src/app/moct.test';
+import { TasksProsp } from 'src/app/moct.test';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,5 +8,13 @@ import Tasks, { TasksProsp } from 'src/app/moct.test';
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent {
-  tasks: TasksProsp[] = Tasks;
+  tasks: TasksProsp[] = [];
+  constructor(private taskService: TaskService) { }
+  ngOnInit() {
+    this.taskService.getData().subscribe((Res) => this.tasks = Res);
+  }
+  t() {
+    console.log('s');
+
+  }
 }

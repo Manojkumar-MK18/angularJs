@@ -11,10 +11,22 @@ export class TasksComponent {
   tasks: TasksProsp[] = [];
   constructor(private taskService: TaskService) { }
   ngOnInit() {
-    this.taskService.getData().subscribe((Res) => this.tasks = Res);
+    this.taskService.getData().subscribe((Res) => (this.tasks = Res));
   }
-  t() {
-    console.log('s');
 
+  deleteTask(task: TasksProsp) {
+    this.taskService
+      .deleteTasks(task)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter((t) => t.id !== task?.id))
+      );
+  }
+
+  toggleTask(task: TasksProsp) {
+    task.remainder = !task.remainder
+    console.log('====================================');
+    console.log(task);
+    console.log('====================================');
+    this.taskService.updateToggleTask(task).subscribe()
   }
 }

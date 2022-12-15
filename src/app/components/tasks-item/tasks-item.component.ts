@@ -11,8 +11,13 @@ export class TasksItemComponent {
   faTimes = faTimes;
   @Input() task: TasksProsp | any;
   @Output() onDeleteTask: EventEmitter<TasksProsp> = new EventEmitter();
+  @Output() onToogleTask: EventEmitter<TasksProsp> = new EventEmitter();
 
   onDelete(task: any) {
     this.onDeleteTask.emit(task);
+  }
+  
+  onToogle(task: any) {
+    this.onToogleTask.emit(task);
   }
 }

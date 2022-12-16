@@ -9,7 +9,7 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TasksComponent {
   tasks: TasksProsp[] = [];
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService) { }
   ngOnInit() {
     this.taskService.getData().subscribe((Res) => (this.tasks = Res));
   }
@@ -25,5 +25,9 @@ export class TasksComponent {
   toggleTask(task: TasksProsp) {
     task.remainder = !task.remainder;
     this.taskService.updateToggleTask(task).subscribe();
+  }
+
+  addTask(task: TasksProsp) {
+    this.taskService.addNewTask(task).subscribe((task) => this.tasks.push(task))
   }
 }

@@ -30,4 +30,9 @@ export class TaskService {
     const url = `${this.URL}/${task.id}`;
     return this.http.put<TasksProsp>(url, task, httpOptions);
   }
+
+  addNewTask(task: TasksProsp): Observable<TasksProsp> {
+    return this.http.post<TasksProsp>(this.URL, task, httpOptions);
+  }
+
 }

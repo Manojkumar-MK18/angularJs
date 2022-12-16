@@ -1,5 +1,5 @@
 export interface TasksProsp {
-    id: number
+    id?: number
     text: string
     day: string
     remainder: boolean

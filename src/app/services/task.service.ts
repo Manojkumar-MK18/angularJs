@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class TaskService {
   URL = 'http://localhost:5000/tasks';
-
+  bool: boolean = false
   constructor(private http: HttpClient) { }
 
   getData(): Observable<TasksProsp[]> {
@@ -33,6 +33,10 @@ export class TaskService {
 
   addNewTask(task: TasksProsp): Observable<TasksProsp> {
     return this.http.post<TasksProsp>(this.URL, task, httpOptions);
+  }
+
+  updateBoolTask() {
+    this.bool = !this.bool 
   }
 
 }

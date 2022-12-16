@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   title: string = 'header works!';
-  
+
+  constructor(private service: TaskService) { } 
   toogleTask() {
-    console.log('sf');
+    this.service.updateBoolTask()
   }
-  ngOnInit() {}
+  ngOnInit() { }
 }

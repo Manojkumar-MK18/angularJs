@@ -9,9 +9,11 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TasksComponent {
   tasks: TasksProsp[] = [];
+  addTaskBool: boolean = false;
   constructor(private taskService: TaskService) { }
+  
   ngOnInit() {
-    this.taskService.getData().subscribe((Res) => (this.tasks = Res));
+    this.taskService.getData().subscribe((Res) => (this.tasks = Res)); 
   }
 
   deleteTask(task: TasksProsp) {
@@ -28,6 +30,8 @@ export class TasksComponent {
   }
 
   addTask(task: TasksProsp) {
-    this.taskService.addNewTask(task).subscribe((task) => this.tasks.push(task))
+    this.taskService
+      .addNewTask(task)
+      .subscribe((task) => this.tasks.push(task));
   }
 }

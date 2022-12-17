@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TaskService } from 'src/app/services/task.service';
+import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,16 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class HeaderComponent {
   title: string = 'header works!';
+  showAddTask: boolean = false
+  subscription: Subscription | any;
 
-  constructor(private service: TaskService) { }
-  
-  toogleTask() { }
-  
+  constructor(private serviceUi: UiService) {
+    this.serviceUi.onToggle().subscribe(value => this.showAddTask = value)
+  }
+
+  toogleTask() {
+    this.serviceUi.toggleAddTask()
+  }
+
   ngOnInit() { }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TasksProsp } from 'src/app/moct.test';
 import { TaskService } from 'src/app/services/task.service';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-tasks',
@@ -10,10 +11,12 @@ import { TaskService } from 'src/app/services/task.service';
 export class TasksComponent {
   tasks: TasksProsp[] = [];
   addTaskBool: boolean = false;
-  constructor(private taskService: TaskService) { }
   
+  constructor(private taskService: TaskService, private uiServices: UiService) { }
+
   ngOnInit() {
-    this.taskService.getData().subscribe((Res) => (this.tasks = Res)); 
+    this.taskService.getData().subscribe((Res) => (this.tasks = Res));
+    this.uiServices.onToggle().subscribe(value => this.addTaskBool = value)
   }
 
   deleteTask(task: TasksProsp) {

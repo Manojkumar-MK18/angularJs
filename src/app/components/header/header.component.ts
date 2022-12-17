@@ -9,9 +9,9 @@ import { TaskService } from 'src/app/services/task.service';
 export class HeaderComponent {
   title: string = 'header works!';
 
-  constructor(private service: TaskService) { } 
-  toogleTask() {
-    this.service.updateBoolTask()
-  }
+  constructor(private service: TaskService) { }
+  
+  toogleTask() { }
+  
   ngOnInit() { }
 }

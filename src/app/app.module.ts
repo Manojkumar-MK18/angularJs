@@ -11,6 +11,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TasksItemComponent } from './components/tasks-item/tasks-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { ReducerComponent } from './components/reducer/reducer.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     TasksComponent,
     TasksItemComponent,
     AddTaskComponent,
+    MainHeaderComponent,
+    ReducerComponent,
   ],
   imports: [
     BrowserModule,

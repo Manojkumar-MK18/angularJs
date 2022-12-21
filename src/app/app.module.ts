@@ -15,6 +15,8 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { ReducerComponent } from './components/reducer/reducer.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './components/reducer/reducers';
+import { MovieappComponent } from './components/movieapp/movieapp.component';
+import { LoginComponent } from './components/movieapp/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { counterReducer } from './components/reducer/reducers';
     AddTaskComponent,
     MainHeaderComponent,
     ReducerComponent,
+    MovieappComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

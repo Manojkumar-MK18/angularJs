@@ -16,7 +16,7 @@
   font-size: 20px;
   font-family: "Aladin";
   position: absolute;
-  top: 200px;
+  top: 180px;
   right: 50px;
   text-align: right;
   width: 500px;
@@ -30,14 +30,14 @@
 
 .login-form {
   width: 400px;
-  height: 300px;
+  height: auto;
   align-items: center;
   background: wheat;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px;
   position: absolute;
   border-radius: 15px;
-  bottom: 50px;
+  bottom: 20px;
   right: 50px;
 }
 

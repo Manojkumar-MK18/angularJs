@@ -25,7 +25,8 @@
 .flim {
   position: absolute;
   top: 50px;
-  left: 20px;
+  left: 50px;
+  width: 400px;
 }
 
 .login-form {

@@ -51,4 +51,8 @@ label {
 .button-wrapper {
   display: flex;
   justify-content: center;
-} 
+}
+h6 {
+  color: red;
+  margin-left: 5px;
+}

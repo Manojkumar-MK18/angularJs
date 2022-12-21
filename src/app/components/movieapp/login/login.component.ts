@@ -8,14 +8,23 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   userName: string = '';
   password: any = '';
+  userNameErrorMsg: string = '';
+  passwordErrorMsg: string = '';
 
   handleLogin() {
-    console.log(this.password);
-    console.log(this.userName);
-    this.userName = ''
-    this.password = ''
+    if (!this.userName) {
+      this.userNameErrorMsg = 'Username must Needed';
+    }
+    if (!this.password) {
+      this.passwordErrorMsg = 'Password must Needed';
+    } else {
+      this.passwordErrorMsg = '';
+      this.userNameErrorMsg = '';
+    }
+
+    this.userName = '';
+    this.password = '';
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

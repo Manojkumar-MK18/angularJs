@@ -17,6 +17,7 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './components/reducer/reducers';
 import { MovieappComponent } from './components/movieapp/movieapp.component';
 import { LoginComponent } from './components/movieapp/login/login.component';
+import { MoviepageComponent } from './components/movieapp/moviepage/moviepage.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LoginComponent } from './components/movieapp/login/login.component';
     ReducerComponent,
     MovieappComponent,
     LoginComponent,
+    MoviepageComponent,
   ],
   imports: [
     BrowserModule,

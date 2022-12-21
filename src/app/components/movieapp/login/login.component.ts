@@ -28,7 +28,7 @@ export class LoginComponent {
       console.log(loginResponse);
       console.log('====================================');
       if (loginResponse === 200) {
-        this.route.navigate(['tasks'])
+        this.route.navigate(['moviePage'])
       }
     }
 

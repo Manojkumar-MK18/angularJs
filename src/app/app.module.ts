@@ -18,6 +18,7 @@ import { counterReducer } from './components/reducer/reducers';
 import { MovieappComponent } from './components/movieapp/movieapp.component';
 import { LoginComponent } from './components/movieapp/login/login.component';
 import { MoviepageComponent } from './components/movieapp/moviepage/moviepage.component';
+import { MovieHeaderComponent } from './components/movieapp/movie-header/movie-header.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MoviepageComponent } from './components/movieapp/moviepage/moviepage.co
     MovieappComponent,
     LoginComponent,
     MoviepageComponent,
+    MovieHeaderComponent,
   ],
   imports: [
     BrowserModule,

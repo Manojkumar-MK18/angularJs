@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +12,7 @@ export class LoginComponent {
   password: any = '';
   userNameErrorMsg: string = '';
   passwordErrorMsg: string = '';
+  constructor(private auth: AuthService, private route: Router) { }
 
   handleLogin() {
     if (!this.userName) {
@@ -20,11 +23,18 @@ export class LoginComponent {
     } else {
       this.passwordErrorMsg = '';
       this.userNameErrorMsg = '';
+      let loginResponse = this.auth.login(this.userName, this.password)
+      console.log('====================================');
+      console.log(loginResponse);
+      console.log('====================================');
+      if (loginResponse === 200) {
+        this.route.navigate(['tasks'])
+      }
     }
 
     this.userName = '';
     this.password = '';
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -33,6 +33,31 @@ h4 {
 
 .movie-thumnails {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+.movies {
+  padding: 10px;
+}
+.cover {
+  cursor: pointer;
+}
+img {
+  border-radius: 5px;
+}
+.detail {
+  width: 180px;
+}
+.name {
+  font-weight: bold;
+  height: 50px;
+  display: flex;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
 }

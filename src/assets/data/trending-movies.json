@@ -47,5 +47,19 @@
     "cover": "https://resizing.flixster.com/jSheSxrrniB6KjIrHKV725-qU_o=/180x258/v2/https://resizing.flixster.com/VqgoYN7k4CFX1gs2ZuRqW0t9FB8=/ems.ZW1zLXByZC1hc3NldHMvdHZzZWFzb24vOWRiNTQ0YzUtMjU4Ni00YTAwLThlZTgtOGFiMjU2NmE0YjcwLnBuZw==",
     "rating": 4.95,
     "reviews": []
+  },
+  {
+    "id": 23,
+    "name": "Solar Opposites",
+    "cover": "https://resizing.flixster.com/bdnAgX9yiOosqfQq9BQA3H1QFh8=/180x258/v2/https://resizing.flixster.com/PHhwiYpYmFDHKQ99uh2cyumb_Ec=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvNTgzMmQwZDUtNGRjYi00NGFhLWE2MGQtZDQzNDdhMmRiMDI4LmpwZw==",
+    "rating": 4.45,
+    "reviews": [
+      {
+        "author": "Albus Dumbledore",
+        "published_on": "2021-10-13 11:27:39",
+        "review": "Awesome movie!",
+        "rating": 4.5
+      }
+    ]
   }
 ]

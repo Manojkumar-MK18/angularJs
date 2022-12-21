@@ -1,9 +1,23 @@
 <div class="login-container">
-  <div class="logo">Login</div>
-  <div class="des">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis veniam,
-    accusamus, saepe ipsum, eum pariatur cupiditate sapiente necessitatibus
-    laudantium quo voluptas sint dolorem nulla tempora tenetur? Dolorum ipsa
-    illo quibusdam.
-  </div>
+    <img class="flim" src=" assets//images/flim.png" alt="flimImage" />
+    <div class="logo">Login</div>
+    <div class="des">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis veniam,
+        accusamus, saepe ipsum, eum pariatur cupiditate sapiente necessitatibus
+        laudantium quo voluptas sint dolorem nulla tempora tenetur? Dolorum ipsa
+        illo quibusdam.
+    </div>
+    <div class="login-form">
+        <div class="form-group form-control">
+            <label for=" uname">Username</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="userName" />
+        </div>
+        <div class="form-group form-control">
+            <label for="password">Password</label>
+            <input type="text" name="password" class="form-control" [(ngModel)]="password" />
+        </div>
+        <div class="button-wrapper">
+            <app-button color="black" (btnClick)="handleLogin()" text="Submit"></app-button>
+        </div>
+    </div>
 </div>

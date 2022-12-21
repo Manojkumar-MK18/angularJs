@@ -13,6 +13,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/Task/add-task/add-task.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { ReducerComponent } from './components/reducer/reducer.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './components/reducer/reducers';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,11 @@ import { ReducerComponent } from './components/reducer/reducer.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    StoreModule.forRoot({
+      count: counterReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

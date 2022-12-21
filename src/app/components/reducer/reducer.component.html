@@ -1,3 +1,17 @@
 <div class="container">
-    s
+  <h1 style="display: flex; justify-content: center">{{ myCount$ | async }}</h1>
+  <div style="display: flex; justify-content: center">
+    <app-button
+      color="green"
+      (btnClick)="onClickIncrement()"
+      text="+"
+    ></app-button>
+    <app-button color="gray" (btnClick)="onClickReset()" text="RESET">
+    </app-button>
+    <app-button
+      color="red"
+      (btnClick)="onClickDecrement()"
+      text="-"
+    ></app-button>
+  </div>
 </div>
